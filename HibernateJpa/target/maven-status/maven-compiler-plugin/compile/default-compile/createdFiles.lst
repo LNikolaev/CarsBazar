@@ -1,0 +1,9 @@
+bg\luben\cars\daos\UserDao.class
+bg\luben\cars\models\Car.class
+bg\luben\cars\models\Authority.class
+bg\luben\cars\models\User.class
+bg\luben\cars\models\Listing.class
+bg\luben\cars\forms\UserRegisterForm.class
+bg\luben\cars\controllers\TestController.class
+bg\luben\cars\daos\CRUDDao.class
+bg\luben\cars\controllers\LoginController.class
