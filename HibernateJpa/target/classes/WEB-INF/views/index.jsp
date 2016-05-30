@@ -20,6 +20,9 @@
 				<th>Password</th>
 				<th>First Name</th>
 				<th>Last Name</th>
+				<th>Email</th>
+				<th>Phone Number</th>
+				<th>Home Page</th>
 				<th>Operation</th>
 			</tr>
 		</thead>
@@ -32,6 +35,9 @@
 						<td>${user.password}</td>
 						<td>${user.firstName}</td>
 						<td>${user.lastName}</td>
+						<td>${user.email}</td>
+						<td>${user.phoneNumber}</td>
+						<td>${user.homePage}</td>
 						<td><a href="${contextPath}/user/edit?userId=${user.id}">edit</a>
 							<a href="${contextPath}/user/delete?userId=${user.id}">delete</a>
 						</td>

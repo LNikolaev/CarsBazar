@@ -23,23 +23,19 @@ public class Car {
 	private String producer;
 
 	@Column(length = 45, nullable = false)
-	private String model;
-
-	@Column(length = 45, nullable = false)
-	private String carType;
+	private String[] model;
 
 	@OneToMany(targetEntity = Listing.class, cascade = CascadeType.ALL, mappedBy = "car", fetch = FetchType.EAGER)
 	private List<Listing> listings;
-	
-	public Car(Integer id, String producer, String model, String carType) {
+
+	public Car(Integer id, String producer, String[] model) {
 		super();
 		this.id = id;
 		this.producer = producer;
 		this.model = model;
-		this.carType = carType;
 	}
-	
-	public Car(){
+
+	public Car() {
 		super();
 	}
 
@@ -59,20 +55,11 @@ public class Car {
 		this.producer = producer;
 	}
 
-	public String getModel() {
+	public String[] getModel() {
 		return model;
 	}
 
-	public void setModel(String model) {
+	public void setModel(String[] model) {
 		this.model = model;
 	}
-
-	public String getCarType() {
-		return carType;
-	}
-
-	public void setCarType(String carType) {
-		this.carType = carType;
-	}
-
 }

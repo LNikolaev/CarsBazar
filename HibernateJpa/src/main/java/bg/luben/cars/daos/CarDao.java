@@ -7,10 +7,12 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import bg.luben.cars.models.Car;
 
 @Repository
+@Transactional
 public class CarDao implements CRUDDao<Car, Integer>{
 
 	@PersistenceContext(unitName = "persistenceUnit")
@@ -37,9 +39,9 @@ public class CarDao implements CRUDDao<Car, Integer>{
 	}
 
 	@Override
-	public Car update(Car t) {
-		entityManager.merge(t);
-		return t;
+	public Car update(Car car) {
+		entityManager.merge(car);
+		return car;
 	}
 
 	@Override

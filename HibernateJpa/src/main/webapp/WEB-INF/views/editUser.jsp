@@ -17,7 +17,7 @@
 				<td><input type="hidden" name="id" value="${user.id}"><td>
 			</tr>
 				<tr>					
-					<td>Userame</td>
+					<td>Username</td>
 					<td><input type="text" name="username" value="${user.username}"></td>
 				</tr>				
 				<tr>	

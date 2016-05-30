@@ -27,8 +27,7 @@
 				<th>Year</th>				
 				<th>Car condition</th>	
 				<th>Features</th>			
-				<th>Price</th>				
-				<th>Contact</th>				
+				<th>Price</th>	
 				<th>Date listing</th>
 				<th>More information</th>				
 				<th>Operation</th>
@@ -51,7 +50,6 @@
 						<td>${listing.carCondition}</td>
 						<td>${listing.features}</td>						
 						<td>${listing.price}</td>
-						<td>${listing.contact}</td>
 						<td>${listing.dateListing}</td>
 						<td>${listing.moreInformation}</td>
 						<td>

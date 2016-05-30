@@ -14,7 +14,7 @@
 	<context:component-scan base-package="bg.luben.cars.controllers" />
 	<context:component-scan base-package="bg.luben.cars.daos" />
 	<context:component-scan base-package="bg.luben.cars.models" />
-	<context:component-scan base-package="bg.luben.cars.utils" />
+<!-- 	<context:component-scan base-package="bg.luben.cars.utils" /> -->
 	
 <!-- 	<context:component-scan base-package="bg.luben.cars.security" /> -->
 
@@ -49,6 +49,8 @@
 
 	<!-- Enable @Transactional annotation -->
 	<tx:annotation-driven />
-	<tx:annotation-driven proxy-target-class="true" /> 
-
+	<tx:annotation-driven proxy-target-class="true" />
+	
+	
+	<mvc:annotation-driven />
 </beans>

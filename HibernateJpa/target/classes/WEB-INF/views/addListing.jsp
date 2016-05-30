@@ -168,19 +168,13 @@
 			<tr>	
 				<td>Price</td>
 				<td><input type="text" name="price" value="${listing.price}"><td>
-			</tr>
-			<tr>
-				<td>Contact</td>															
-				<td style="margin-bottom: 6px; margin-right: 5px;display: inline"><input type="email" name="contact" style="margin-right: 5px;" placeholder="Email"></td>				
-				<td style="margin-bottom: 6px; margin-right: 5px;display: inline"><input type="tel" name="contact" style="margin-right: 5px;" placeholder="Telephone"></td>				
-				<td style="margin-bottom: 6px; margin-right: 5px;display: inline"><input type="url" name="contact" style="margin-right: 5px;" placeholder="Homepage"></td>
-			</tr>
+			</tr>			
 			<tr>	
 				<td>Date listing</td>
-				<td><input type="text" name="dateListing" value="${listing.dateListing}" placeholder="YYYY-MM-dd"><td>
+				<td><input type="text" name="dateListing" value="${listing.dateListing}" pattern="\d{4}\-(0?[1-9]|1[012])\-(0?[1-9]|[12][0-9]|3[01])" placeholder="YYYY-MM-dd"><td>
 			</tr>
 			<tr>				
-				<textarea rows="4" cols="50" name="moreInformation" placeholder="Enter text here.."></textarea>
+				<td><textarea rows="4" cols="50" name="moreInformation" placeholder="Enter text here..">${listing.moreInformation}</textarea></td>
 			</tr>
 		</table>		
 		<input type=submit id="btn1" value="Submit" />

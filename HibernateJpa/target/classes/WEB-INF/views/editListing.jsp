@@ -164,7 +164,7 @@
 				<div style="margin-left: 6px;display: inline-table;"><input type="checkbox" <c:if test="${fn:contains(getCurrentFeature, 'Four wheel drive')}">checked="checked"</c:if> name="features" value="Four wheel drive">Four wheel drive</div>
 				<div style="margin-left: 6px;display: inline-table;"><input type="checkbox" <c:if test="${fn:contains(getCurrentFeature, 'Immobilizer')}">checked="checked"</c:if> name="features" value="Immobilizer">Immobilizer</div>
 				<div style="margin-left: 6px;display: inline-table;"><input type="checkbox" <c:if test="${fn:contains(getCurrentFeature, 'Keyless Entry')}">checked="checked"</c:if> name="features" value="Keyless Entry">Keyless Entry</div>
-				<div style="margin-left: 6px;display: inline-table;"><input type="checkbox" <c:if test="${fn:contains(getCurrentFeature, 'Lane Departure Warning System')}">checked="checked"</c:if> name="features" value="Lane Departure Warning System">ane Departure Warning Syste</div>
+				<div style="margin-left: 6px;display: inline-table;"><input type="checkbox" <c:if test="${fn:contains(getCurrentFeature, 'Lane Departure Warning System')}">checked="checked"</c:if> name="features" value="Lane Departure Warning System">Lane Departure Warning Syste</div>
 				<div style="margin-left: 6px;display: inline-table;"><input type="checkbox" <c:if test="${fn:contains(getCurrentFeature, 'LED Headlights')}">checked="checked"</c:if> name="features" value="LED Headlights">LED Headlights</div>
 				<div style="margin-left: 6px;display: inline-table;"><input type="checkbox" <c:if test="${fn:contains(getCurrentFeature, 'Light sensor')}">checked="checked"</c:if> name="features" value="Light sensor">Light sensor</div>
 				<div style="margin-left: 6px;display: inline-table;"><input type="checkbox" <c:if test="${fn:contains(getCurrentFeature, 'Traction control')}">checked="checked"</c:if> name="features" value="Traction control">Traction control</div>
@@ -174,16 +174,10 @@
 			<tr>	
 				<td>Price</td>
 				<td><input type="text" name="price" value="${listing.price}"><td>
-			</tr>	
-			<tr>
-				<td>Contact</td>															
-				<td style="margin-bottom: 6px; margin-right: 5px;display: inline"><input type="email" name="contact" style="margin-right: 5px;" placeholder="Email"></td>				
-				<td style="margin-bottom: 6px; margin-right: 5px;display: inline"><input type="tel" name="contact" style="margin-right: 5px;" placeholder="Telephone"></td>				
-				<td style="margin-bottom: 6px; margin-right: 5px;display: inline"><input type="url" name="contact" style="margin-right: 5px;" placeholder="Homepage"></td>
-			</tr>
+			</tr>				
 			<tr>	
 				<td>Date listing</td>
-				<td><input type="text" name="dateListing" value="${listing.dateListing}"><td>
+				<td><input type="text" name="dateListing" value="${listing.dateListing}" pattern="\d{4}\-(0?[1-9]|1[012])\-(0?[1-9]|[12][0-9]|3[01])"><td>
 			</tr>
 			<tr>				
 				<td><textarea rows="4" cols="50" name="moreInformation" placeholder="Enter text here..">${listing.moreInformation}</textarea></td>
