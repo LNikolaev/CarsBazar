@@ -42,21 +42,7 @@ public class CarController {
 
 	@RequestMapping(value = "add", method = RequestMethod.POST)
 	public String addCar(Model model, @ModelAttribute("car") CarRegisterForm carRegisterForm,
-			HttpServletRequest request, @Validated Car test, BindingResult result) throws ParseException {
-		model.addAttribute("test", test);
-				
-		        	producerAndModel(model);		
-		            model.addAttribute("test", test);
-		
-		           
-		
-		        
-
-		
-		
-		
-		
-		
+			HttpServletRequest request) throws ParseException {	
 		Car car = new Car();
 		car.setProducer(carRegisterForm.getProducer());
 		car.setModel(carRegisterForm.getModel());
@@ -89,14 +75,5 @@ public class CarController {
 	public String delete(Integer carId, Model model, HttpServletRequest request) {
 		carDao.deleteById(carId);
 		return "redirect:carPage";
-	}
-	
-	private void producerAndModel(Model model) {
-		List<String> opelList = new ArrayList<String>();
-		opelList.add("Vectra");
-		opelList.add("Insignia");
-		opelList.add("Kadet");
-		opelList.add("Astra");
-		model.addAttribute("opelList", opelList);
-	}
+	}	
 }

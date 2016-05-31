@@ -23,12 +23,12 @@ public class Car {
 	private String producer;
 
 	@Column(length = 45, nullable = false)
-	private String[] model;
+	private String model;
 
 	@OneToMany(targetEntity = Listing.class, cascade = CascadeType.ALL, mappedBy = "car", fetch = FetchType.EAGER)
 	private List<Listing> listings;
 
-	public Car(Integer id, String producer, String[] model) {
+	public Car(Integer id, String producer, String model) {
 		super();
 		this.id = id;
 		this.producer = producer;
@@ -55,11 +55,11 @@ public class Car {
 		this.producer = producer;
 	}
 
-	public String[] getModel() {
+	public String getModel() {
 		return model;
 	}
 
-	public void setModel(String[] model) {
+	public void setModel(String model) {
 		this.model = model;
 	}
 }

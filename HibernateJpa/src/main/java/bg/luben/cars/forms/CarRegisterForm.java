@@ -4,13 +4,13 @@ public class CarRegisterForm {
 
 	private Integer id;
 	private String producer;
-	private String[] model;
+	private String model;
 
 	public CarRegisterForm() {
 		super();
 	}
 
-	public CarRegisterForm(Integer id, String producer, String[] model) {
+	public CarRegisterForm(Integer id, String producer, String model) {
 		super();
 		this.id = id;
 		this.producer = producer;
@@ -34,11 +34,11 @@ public class CarRegisterForm {
 		this.producer = producer;
 	}
 
-	public String[] getModel() {
+	public String getModel() {
 		return model;
 	}
 
-	public void setModel(String[] model) {
+	public void setModel(String model) {
 		this.model = model;
 	}
 }
