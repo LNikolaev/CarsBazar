@@ -24,4 +24,7 @@ public class DateFormatter {
 		Date parsed = sdf.parse(formatedDate);
 		return parsed;
 	}
+	public static void main(String[] args) {
+		System.err.println("Hello");
+	}
 }

@@ -9,10 +9,10 @@
 	</script>
 	<head>
 		<title>Car addition</title>
-		<link href="<c:url value="${pageContext.request.contextPath}/resources/css/main.css" />" rel="stylesheet">
+		<link href="<c:url value="${contextPath}/resources/css/main.css" />" rel="stylesheet">
 		
-    	<script src="<c:url value="${pageContext.request.contextPath}/resources/js/jquery-1.12.4.min.js" />"></script>
-   		<script src="<c:url value="${pageContext.request.contextPath}/resources/js/main.js" />"></script>
+    	<script src="<c:url value="${contextPath}/resources/js/jquery-1.12.4.min.js" />"></script>
+   		<script src="<c:url value="${contextPath}/resources/js/main.js" />"></script>
 	</head>
 	<body>
 		<h1>
@@ -23,20 +23,22 @@
  		<form:form method="POST" action="${contextPath}/car/add" modelAttribute="car">
 			<table>
 				<tr>					
-					<td>Producer</td>
-					
-					<td><select name="producer" id="Producers" ></select></td>					
-				</tr> 				
-<!-- 				<tr>						 -->
-<!-- 					<td><label for="Opel">Opel: </label></td> -->
-<!-- 		   			<td><select name="model" id="Opel" ></select></td> -->
-<!-- 				</tr>	 -->
+					<td>Producer</td>	
+					<td>
+						<select name="producer" id="producerSelect">
+						  <option value="">Select</option>			  
+						</select>
+					</td>										
+				</tr> 
 				
-				<tr>						
-					<td><label for="Audi">Audi: </label></td>
-		   			<td><select name="model" id="Audi" ></select></td>
-				</tr>			
-				
+				<tr>
+				<td>Model</td>
+					<td>
+						<select name="model" id="modelSelect"">						
+						  <option value="---">Select</option>
+						</select>				
+					</td>	
+				</tr>
 			</table>
 			<input type=submit id="btn1" name="Submit"/>
 		</form:form>

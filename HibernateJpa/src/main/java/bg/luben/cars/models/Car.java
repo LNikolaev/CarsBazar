@@ -19,10 +19,10 @@ public class Car {
 	@Column(unique = true, nullable = false)
 	private Integer id;
 
-	@Column(length = 30, nullable = false)
+	@Column(length = 30, nullable = true)
 	private String producer;
 
-	@Column(length = 45, nullable = false)
+	@Column(length = 45, nullable = true)
 	private String model;
 
 	@OneToMany(targetEntity = Listing.class, cascade = CascadeType.ALL, mappedBy = "car", fetch = FetchType.EAGER)

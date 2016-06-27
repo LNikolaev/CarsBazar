@@ -19,6 +19,7 @@ public class JSONController {
 		Map<String, List<String>> map = new HashMap<String, List<String>>();
 		map.put("Opel", Arrays.asList("Vectra", "Astra", "Kadet"));
 		map.put("VW", Arrays.asList("GolF", "Golf gt"));
+		map.put("Audi", Arrays.asList("A3", "A4", "Q7"));
 		// CarBrand brand1 = new CarBrand("Opel", Arrays.asList( new
 		// CarModel("Vectra"), new CarModel("Astra"), new CarModel("Omega")));
 		// CarBrand brand2 = new CarBrand("VW", Arrays.asList( new

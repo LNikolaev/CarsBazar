@@ -1,52 +1,58 @@
+//
 $(document).ready(function() {
-//         var opelItems = '<option selected="selected" value="0">- Select -</option>';
-//         var audiItems = '<option selected="selected" value="0">- Select -</option>';
-// 		 var producers = '<option selected="selected" value="0">- Select -</option>';		
- 		
- 		 
-//		 for (var i = 0; i < jsonData.OpelList.length; i++) {
-//	         opelItems += "<option value='" + jsonData.OpelList[i].opelValue + "'>" + jsonData.OpelList[i].opelname + "</option>";
-//		 }
-// 
-//		 $("#Opel").html(opelItems);
-//	      for (var i = 0; i < jsonData.AudiList.length; i++) {
-//	          audiItems += "<option value='" + jsonData.AudiList[i].audiValue + "'>" + jsonData.AudiList[i].audiname + "</option>";
-//	      }
-//	      
-//	      $("#Audi").html(audiItems);
-//	 
-//	 
-//	 
-//		 for (var i = 0; i < jsonData.producers.length; i++) {
-//			 producers += "<option value='" + jsonData.producers[i].producerValue + "'>" + jsonData.producers[i].producerName + "</option>";
-//	     }
-//     
-//		 $("#Producers").html(producers);
-// 		$('#msg').html("This is updated by jQuery")
+	
+	//
 	loadCarData();
+	
+	//
+	$('#producerSelect').change(function(){
+		//
+		var selectedBrand = $(this).val();
+		
+		//
+		$('#modelSelect').html('');
+		
+		$('#modelSelect').append('<option value="---">Select</option>')
+		//
+		for(var i = 0; i < carsData[selectedBrand].length; i++){
+			$('#modelSelect').append('<option value="'+carsData[selectedBrand][i]+'">'+carsData[selectedBrand][i]+'</option>')
+		}
+	});
+	
+	//
+	$('#modelSelect').change(function(){
+		var selectedModel = $(this).val();
+		alert(selectedModel)
+	});
 });
 
+//
 var carsData;
 
-function loadCarData(){
+function loadCarData() {
+	//
 	$.ajax({
-		url: contextPath + "/cars/brands",
-		type: 'get',
-        contentType: "json",
-		success: function(data){
+		url : contextPath + "/cars/brands",
+		type : 'get',
+		contentType : "json",
+		success : function(data) {
+			carsData = data;
+			//
 			fillDropdowns(data);
 		},
-		error: function(error){
+		error : function(error) {
 			alertMe("Invalid Request!")
 		}
 	});
 }
 
-function fillDropdowns(){
-	//TODO
-	for (var property in data) {
-	    if (data.hasOwnProperty(property)) {
-	        alert(data[property][0])
-	    }
+function fillDropdowns(data) {
+	var producerSelect =  $('#producerSelect');
+	var modelSelect = $('#modelSelect');
+	//
+	for ( var property in data) {
+		if (data.hasOwnProperty(property)) {
+			producerSelect.append('<option value="'+property+'">'+property+'</option>')			
+		}
 	}
 }
