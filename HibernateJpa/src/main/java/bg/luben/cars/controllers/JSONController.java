@@ -21,6 +21,7 @@ public class JSONController {
 		map.put("VW", Arrays.asList("GolF", "Golf gt"));
 		map.put("Audi", Arrays.asList("A3", "A4", "Q7"));
 		map.put("Skoda", Arrays.asList("Fabia", "Octavia", "Superb"));
+		map.put("BMW", Arrays.asList("230", "320", "328d"));
 		
 		// CarBrand brand1 = new CarBrand("Opel", Arrays.asList( new
 		// CarModel("Vectra"), new CarModel("Astra"), new CarModel("Omega")));
